@@ -79,7 +79,7 @@ input {
 
 }
 
-li span {
+div span {
     font-weight: bolder;
     color: goldenrod;
 }
