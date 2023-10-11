@@ -10,7 +10,6 @@ function App() {
     axios
       .get(baseURL)
       .then((response) => {
-        
         setPosts(response.data);
       })
       .catch((error) => {
@@ -25,19 +24,13 @@ function App() {
     return setPosts(filter);
   };
 
-  
-
-
-
   return (
     <>
       <h1> POSTS FROM JSONPLACEHOLDER</h1>
 
-       {posts.map((item) => (
-            
-            <Posts key={item.id} item={item} onRemove= {handleDelete} />
-        ))}
-      
+      {posts.map((item) => (
+        <Posts key={item.id} item={item} onRemove={handleDelete} />
+      ))}
     </>
   );
 }
